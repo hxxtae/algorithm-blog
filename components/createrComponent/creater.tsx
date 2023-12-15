@@ -3,7 +3,7 @@ import { faLink } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import styles from './page.module.css';
+import styles from './creater.module.css';
 
 export default function CreaterComponent() {
   return (

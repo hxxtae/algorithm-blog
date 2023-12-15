@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 import { ContentType } from '@/interfaces/contents';
 import { dateFormatToYMD, getTextOfBetweenTag } from '@/utils/format';
-import styles from './page.module.css';
+import styles from './posts.module.css';
 
 interface PostsComponentProps {
   data: ContentType[];
@@ -26,7 +26,7 @@ export default async function PostsComponent({ data, category }: PostsComponentP
   return (
     <section className={styles.posts}>
       <h1 className={styles.posts_header}>{category === 'boj' ? 'Baekjoon Online Judge' : 'Programmers'}</h1>
-      <p className={styles.hr}></p>
+      {/* <p className={styles.hr}></p> */}
       <ul className={styles.post_list}>
         {data?.map((post, idx) => (
           <li key={idx}>

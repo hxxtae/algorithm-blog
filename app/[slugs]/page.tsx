@@ -4,8 +4,8 @@ import { ContentType } from '@/interfaces/contents';
 import { getAllPost } from '@/lib/api';
 import styles from './page.module.css';
 import Header from '@/components/header/page';
-import PostsComponent from './posts';
-import CreaterComponent from './creater';
+import PostsComponent from '../../components/postsComponent/posts';
+import CreaterComponent from '../../components/createrComponent/creater';
 
 export const metadata: Metadata = {
   title: 'Algorithm',
