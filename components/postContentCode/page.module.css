@@ -1,0 +1,20 @@
+.syntax_code_wrapper {
+  border-radius: 5px;
+  margin-top: 1em;
+  overflow: hidden;
+}
+
+.syntax_code_wrapper code {
+  font-family: var(--font-code);
+  font-size: 14px;
+}
+
+.small_code {
+  border-radius: 3px;
+  /* background-color: #eef0f1; */
+  background-color: #e9ecef;
+  box-sizing: border-box;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  color: #212529;
+}

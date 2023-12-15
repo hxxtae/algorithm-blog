@@ -1,0 +1,7 @@
+.post_p {
+  margin-bottom: 1.9em;
+  line-height: 1.7;
+  word-break: keep-all;
+  overflow-wrap: break-word; /* word-wrap 대체 */
+  /* font-family: var(--font-mono); */
+}

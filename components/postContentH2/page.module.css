@@ -1,0 +1,20 @@
+.post_h2 {
+  margin-top: 1.9em;
+  margin-bottom: 1em;
+  font-size: 20px;
+  font-weight: 600;
+
+  @media only screen and (max-width: 1080px) {
+
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+
+.post_line {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, .5);
+  margin: 7px 0;
+}

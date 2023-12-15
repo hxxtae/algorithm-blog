@@ -1,0 +1,15 @@
+.post_table {
+  border: 1px solid rgb(82, 82, 82);
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: transparent;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .post_table {
+    width: 100%;
+    max-width: 100%;
+  }
+}

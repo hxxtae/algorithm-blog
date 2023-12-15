@@ -1,0 +1,13 @@
+.post_h1 {
+  font-size: 42px;
+  margin-top: 1.9em;
+  margin-bottom: 1em;
+
+  @media only screen and (max-width: 1080px) {
+
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 32px;
+  }
+}
