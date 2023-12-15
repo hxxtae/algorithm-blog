@@ -27,8 +27,8 @@
   width: 100%;
   padding: 22px 14px;
   margin: 32px 0;
-  border-top: 1px solid #F2F2F2;
-  border-bottom: 1px solid #F2F2F2;
+  border-top: 1px solid var(--third-foreground);
+  border-bottom: 1px solid var(--third-foreground);
   font-size: 16px;
   overflow: hidden;
 }
@@ -44,7 +44,7 @@
 .content_info_algorithm li {
   padding: 6px 12px;
   border-radius: 12px;
-  background-color: #F2F2F2;
+  background-color: var(--card-background);
   list-style: none;
 }
 

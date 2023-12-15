@@ -39,6 +39,63 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --light: #ffffff;
+  --dark: #000000;
+  --dark-blur: #242424;
+
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --gray-950: #030712;
+
+  --zinc-50: #f9fafb;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-400: #a1a1aa;
+  --zinc-500: #71717a;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+  --zinc-950: #020817;
+  --zinc-1000: #09090b;
+
+    /* 
+  ---------------------
+    theme: light (default) 
+  ---------------------
+  - light theme 배경색, 전경색 설정
+  */
+  --background: #ffffff;
+  --foreground: #242424;
+  --secondary-foreground: #6B6B6B;
+  --third-foreground: #e2e8f0;
+  --card-background: #F2F2F2;
+  --card-foreground: #242424;
+}
+
+/* 
+---------------------
+  theme: dark
+---------------------
+- dark theme 배경색, 전경색 설정
+*/
+.dark {
+  --background: #020817;
+  --foreground: #f9fafb;
+  --secondary-foreground: #9ca3af;
+  --third-foreground: #1e293b;
+  --card-background: #3f3f46;
+  --card-foreground: #f9fafb;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -89,13 +146,15 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--foreground);
+  background-color: var(--background);
   /* background: linear-gradient(
       to top,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
+  /* background-color: var(--gray-50); */
 }
 
 a {
@@ -105,6 +164,6 @@ a {
 
 @media (prefers-color-scheme: dark) {
   html {
-    color-scheme: dark;
+    /* color-scheme: dark; */
   }
 }

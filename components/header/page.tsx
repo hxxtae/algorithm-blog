@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 import { useEffect } from 'react';
+import { useTheme } from 'next-themes';
 
 export default function Header() {
 
@@ -61,6 +62,24 @@ export default function Header() {
         <Link href={'/boj'}>BOJ</Link>
         <Link href={'/programmers'}>Programmers</Link>
       </div>
+      <div>
+        <ThemeChanger />
+      </div>
     </div>
+  )
+}
+
+function ThemeChanger() {
+  const { setTheme, theme } = useTheme();
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  return (
+    <button type='button' onClick={toggleTheme}>
+      <strong className="dark:hidden">Light</strong>
+      <strong className="dark:block">Dark</strong>
+    </button>
   )
 }
