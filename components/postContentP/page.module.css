@@ -5,3 +5,7 @@
   overflow-wrap: break-word; /* word-wrap 대체 */
   /* font-family: var(--font-mono); */
 }
+
+li .post_p {
+  margin-bottom: 0;
+}

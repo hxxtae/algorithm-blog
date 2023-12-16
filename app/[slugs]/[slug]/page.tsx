@@ -22,7 +22,7 @@ interface IPostItem {
 }
 
 export default async function PostItem({ params }: IPostItem) {
-  const data = await getData(params.slugs, params.slug);
+  const data = await getPropsData(params.slugs, params.slug);
   metadata.title = `Algorithm : ${decodeURIComponent(params.slug)}`;
 
   return (
@@ -52,7 +52,7 @@ export default async function PostItem({ params }: IPostItem) {
 }
 
 // NOTE: getStaticProps
-export async function getData(slugs: string, slug: string): Promise<ContentType | undefined> {
+export async function getPropsData(slugs: string, slug: string): Promise<ContentType | undefined> {
   // console.log('props')
   const posts = await getAllPost(decodeURIComponent(slugs));
   const thisPost = posts.find(post => decodeURIComponent(slug) === post.title);

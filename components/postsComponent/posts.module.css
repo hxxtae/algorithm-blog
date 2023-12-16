@@ -6,7 +6,7 @@
 
 .posts_header {
   font-size: 42px;
-  margin: 52px 0 48px;
+  margin: 52px 24px 48px;
 }
 
 .hr {
@@ -23,6 +23,7 @@
   position: relative;
   border-bottom: 1px solid var(--third-foreground);
   padding-top: 24px;
+  margin: 0 24px;
 }
 
 .post_list li:first-child {
@@ -73,21 +74,27 @@
   position: absolute;
   top: 24px;
   right: 24px;
-  width: 20px;
+  width: 15px;
   color: #1A8917;
   /* color: #1f35dd; */
 }
 
+.post_bookmark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .post_bookmark:before {
   position: absolute;
-  bottom: 5px;
-  right: 0px;
+  bottom: -2px;
+  right: -2px;
   content: '';
   display: block;
   width: 10px;
   height: 20px;
-  background-color: #000000;
-  filter: blur(7px);
+  background-color: #1a89178f;
+  filter: blur(6px);
   z-index: -1;
 }
 
@@ -111,9 +118,5 @@
   .post_header {
     font-size: 1em;
     font-weight: 600;
-  }
-
-  .post_bookmark {
-    width: 15px;
   }
 }
