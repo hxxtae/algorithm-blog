@@ -34,8 +34,8 @@ export default async function PostList({ params }: PostListProps) {
   )
 }
 
-// NOTE: getStaticProps
-export const getPropsData = async (slugs: string): Promise<ContentType[]> => {
+// NOTE: getStaticProps (not export)
+const getPropsData = async (slugs: string): Promise<ContentType[]> => {
   const posts = await getAllPost(slugs);
   return posts;
 }

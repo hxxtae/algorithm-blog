@@ -51,12 +51,11 @@ export default async function PostItem({ params }: IPostItem) {
   )
 }
 
-// NOTE: getStaticProps
-export async function getPropsData(slugs: string, slug: string): Promise<ContentType | undefined> {
-  // console.log('props')
+// NOTE: getStaticProps (not export)
+async function getPropsData(slugs: string, slug: string): Promise<ContentType> {
   const posts = await getAllPost(decodeURIComponent(slugs));
   const thisPost = posts.find(post => decodeURIComponent(slug) === post.title);
-  if (!thisPost) return;
+  if (!thisPost) return {};
 
   return thisPost;
 }
