@@ -14,41 +14,32 @@ import PostContentHr from '../postContentHr/page'
 
 const custom = {
   p({ ...props }) {
-    const customProps = { ...props };
-    return <PostContentP customProps={customProps} />
+    return <PostContentP customProps={{...props}} />
   },
   h1({ ...props }) {
-    const customProps = { ...props };
-    return <PostContentH1 customProps={customProps} />
+    return <PostContentH1 customProps={{...props}} />
   },
   h2({ ...props }) {
-    const customProps = { ...props };
-    return <PostContentH2 customProps={customProps} />
+    return <PostContentH2 customProps={{...props}} />
   },
   h3({ ...props }) {
-    const customProps = { ...props };
-    return <PostContentH3 customProps={customProps} />
+    return <PostContentH3 customProps={{...props}} />
   },
   hr({ ...props }) {
-    const customProps = { ...props };
-    return <PostContentHr customProps={customProps} />
+    return <PostContentHr customProps={{...props}} />
   },
   table({ ...props }) {
-    const customProps = { ...props };
-    return <PostContentTable customProps={customProps} />
+    return <PostContentTable customProps={{...props}} />
   },
   th({ ...props }) {
-    const customProps = { ...props };
-    return <PostContentTh customProps={customProps} />
+    return <PostContentTh customProps={{...props}} />
   },
   td({ ...props }) {
-    const customProps = { ...props };
-    return <PostContentTd customProps={customProps} />
+    return <PostContentTd customProps={{...props}} />
   },
   code({ ...props }) {
-    const customProps = { ...props };
     const match = /language-(\w+)/.exec(props.className) as RegExpExecArray;
-    return <PostContentCode match={match} customProps={customProps} />
+    return <PostContentCode match={match} customProps={{...props}} />
   }
 }
 
