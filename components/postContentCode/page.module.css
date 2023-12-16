@@ -9,6 +9,11 @@
   font-size: 14px;
 }
 
+.syntax_code_wrapper div {
+  background-color: var(--code-background) !important;
+  color: var(--code-foreground) !important;
+}
+
 .small_code {
   border-radius: 3px;
   /* background-color: #eef0f1; */
