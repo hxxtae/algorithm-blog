@@ -2,16 +2,12 @@
   border-radius: 5px;
   margin-top: 1em;
   overflow: hidden;
-}
-
-.syntax_code_wrapper code {
-  font-family: var(--font-code);
   font-size: 14px;
 }
 
-.syntax_code_wrapper div {
-  background-color: var(--code-background) !important;
-  color: var(--code-foreground) !important;
+.syntax_code_wrapper code {
+  font-family: var(--font-mono);
+  font-size: .875em;
 }
 
 .small_code {
