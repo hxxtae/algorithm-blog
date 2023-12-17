@@ -6,7 +6,7 @@ interface BojLayoutProps {
 
 export default function PostListLayout({ children }: BojLayoutProps) {
   return (
-    <section className={styles.boj_section}>
+    <section className={styles.layout_section}>
       {children}
     </section>
   )
