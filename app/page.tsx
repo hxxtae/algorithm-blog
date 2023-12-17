@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 import styles from './page.module.css'
 import Header from '@/components/header/page'
+import MainContent from '@/components/mainContent/mainContent'
 
 export const metadata: Metadata = {
   title: 'Algorithm',
@@ -16,6 +17,7 @@ export default function Home() {
     <>
       <Header />
       <main className={styles.main}>
+        <MainContent />
 
         {/* <div className={styles.center}>
           <Image

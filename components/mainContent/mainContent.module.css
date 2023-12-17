@@ -1,0 +1,55 @@
+.mainContnet {
+  margin: 0 auto;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 100px 0;
+  max-width: 768px;
+  font-size: 28px;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.desc1 {
+  font-size: 24px;
+  color: var(--secondary-foreground);
+}
+
+.desc2 {
+  font-size: 24px;
+  color: var(--secondary-foreground);
+}
+
+.desc2_1 {
+  font-size: 24px;
+}
+
+.desc2_1::after {
+  content: '|';
+  display: inline-block;
+  color: var(--foreground);
+  padding: 0 3.5px;
+  animation-name: cursorTwinkling;
+  animation-duration: .3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  opacity: 1;
+}
+
+@keyframes cursorTwinkling {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: .5;
+  }
+}
