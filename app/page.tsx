@@ -4,7 +4,8 @@ import Link from 'next/link'
 
 import styles from './page.module.css'
 import Header from '@/components/header/page'
-import MainContent from '@/components/mainContent/mainContent'
+import MainBanner from '@/components/mainBanner/page'
+import MainPosts from '@/components/mainPosts/page'
 
 export const metadata: Metadata = {
   title: 'Algorithm',
@@ -17,18 +18,8 @@ export default function Home() {
     <>
       <Header />
       <main className={styles.main}>
-        <MainContent />
-
-        {/* <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-        </div> */}
+        <MainBanner />
+        <MainPosts />
       </main>
     </>
   )

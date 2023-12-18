@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import styles from './mainContent.module.css';
+import styles from './page.module.css';
 
 const textContent = {
   title: "Welcome to Hxxtae's Algorithm blog.",
@@ -18,7 +18,7 @@ const textKinds = [
   'Minimum Spanning Tree Algorithm.',
 ]
 
-export default function MainContent() {
+export default function MainBanner() {
   const [mounted, setMounted] = useState(false);
   const [text, setText] = useState('');
 
@@ -42,14 +42,13 @@ export default function MainContent() {
   }, [mounted]);
 
   return (
-    <section className={styles.mainContent}>
-      <div className={styles.contentBox}>
-        <span className={styles.title}>{textContent.title}</span>
-        <span className={styles.desc1}>{textContent.desc1}</span>
-        <div>
-          <span className={styles.desc2}>{textContent.desc2}</span>
-          <span className={styles.desc2_1}>{text}</span>
-        </div>
+    <section className={styles.banner}>
+      <span className={styles.title}>{textContent.title}</span>
+      <span className={styles.desc1}>{textContent.desc1}</span>
+      <div className={styles.wrapper}>
+        <span className={styles.desc2}>{textContent.desc2}</span>
+        <span className={styles.desc2_1}>{text}</span>
+        <div className={styles.center}></div>
       </div>
     </section>
   )

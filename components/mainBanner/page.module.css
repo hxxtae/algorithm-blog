@@ -1,15 +1,11 @@
-.mainContnet {
-  margin: 0 auto;
-}
-
-.contentBox {
+.banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
-  margin: 100px 0;
   max-width: 768px;
+  margin: 200px 0;
   font-size: 28px;
 }
 
@@ -43,6 +39,27 @@
   opacity: 1;
 }
 
+.wrapper {
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.center::after {
+  content: '';
+  position: absolute;
+  width: 240px;
+  height: 180px;
+  background: var(--tile-border);
+  filter: blur(45px);
+}
+
 @keyframes cursorTwinkling {
   0%,
   50% {
@@ -51,5 +68,18 @@
   51%,
   100% {
     opacity: .5;
+  }
+}
+
+/* 
+---------------
+  mobile 
+---------------
+*/
+@media only screen and (max-width: 767px) {
+  .banner {
+    margin: 0;
+    height: 100vh;
+    transform: translateY(-30px);
   }
 }
