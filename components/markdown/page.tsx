@@ -11,6 +11,7 @@ import PostContentTh from '../postContentTh/page'
 import PostContentP from '../postContentP/page'
 import PostContentH1 from '../postContentH1/page'
 import PostContentHr from '../postContentHr/page'
+import PostContentUl from '../postContentUl/page'
 
 const custom = {
   p({ ...props }) {
@@ -36,6 +37,9 @@ const custom = {
   },
   td({ ...props }) {
     return <PostContentTd customProps={{...props}} />
+  },
+  ul({ ...props }) {
+    return <PostContentUl customProps={{...props}} />
   },
   code({ ...props }) {
     const match = /language-(\w+)/.exec(props.className) as RegExpExecArray;
