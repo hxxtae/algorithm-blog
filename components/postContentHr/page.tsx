@@ -9,7 +9,7 @@ interface PostContentHrProps {
 export default function PostContentHr({ customProps }: PostContentHrProps) {
   return (
     <>
-      <hr id={customProps.children} className={styles.post_hr} />
+      <hr className={styles.post_hr} />
     </>
   )
 }

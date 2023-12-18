@@ -9,7 +9,7 @@ interface PostContentTableProps {
 export default function PostContentTable({ customProps }: PostContentTableProps) {
   return (
     <>
-      <table id={customProps.children} className={styles.post_table}>
+      <table className={styles.post_table}>
         {customProps.children}
       </table>
     </>

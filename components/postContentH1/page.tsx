@@ -9,7 +9,7 @@ interface PostContentH1Props {
 export default function PostContentH1({ customProps }: PostContentH1Props) {
   return (
     <>
-      <h1 id={customProps.children} className={styles.post_h1}>
+      <h1 className={styles.post_h1}>
         {customProps.children}
       </h1>
       <div className={styles.post_line}></div>

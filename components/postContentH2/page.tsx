@@ -9,7 +9,7 @@ interface PostContentH2Props {
 export default function PostContentH2({ customProps }: PostContentH2Props) {
   return (
     <>
-      <h2 id={customProps.children} className={styles.post_h2}>
+      <h2 className={styles.post_h2}>
         {customProps.children}
       </h2>
       {/* <div className={styles.post_line}></div> */}

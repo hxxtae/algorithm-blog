@@ -9,7 +9,7 @@ interface PostContentThProps {
 export default function PostContentTh({ customProps }: PostContentThProps) {
   return (
     <>
-      <th id={customProps.children} className={styles.post_th}>
+      <th className={styles.post_th}>
         {customProps.children}
       </th>
     </>

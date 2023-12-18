@@ -9,7 +9,7 @@ interface PostContentH3Props {
 export default function PostContentH3({ customProps }: PostContentH3Props) {
   return (
     <>
-      <h3 id={customProps.children} className={styles.post_h3}>
+      <h3 className={styles.post_h3}>
         {customProps.children}
       </h3>
     </>

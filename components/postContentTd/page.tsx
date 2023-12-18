@@ -9,7 +9,7 @@ interface PostContentTdProps {
 export default function PostContentTd({ customProps }: PostContentTdProps) {
   return (
     <>
-      <td id={customProps.children} className={styles.post_td}>
+      <td className={styles.post_td}>
         {customProps.children}
       </td>
     </>

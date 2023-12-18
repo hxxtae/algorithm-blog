@@ -9,7 +9,7 @@ interface PostContentPProps {
 export default function PostContentP({ customProps }: PostContentPProps) {
   return (
     <>
-      <p id={customProps.children} className={styles.post_p}>
+      <p className={styles.post_p}>
         {customProps.children}
       </p>
     </>
