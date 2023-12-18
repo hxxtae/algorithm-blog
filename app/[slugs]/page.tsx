@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 
 import { ContentType } from '@/interfaces/contents';
 import { getAllPost } from '@/lib/api';
+import type { PathKinds } from '@/interfaces/paths';
 import styles from './page.module.css';
 import Header from '@/components/header/page';
 import PostsComponent from '../../components/postsComponent/posts';
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 
 export interface PostListProps {
   params: {
-    slugs: string;
+    slugs: PathKinds;
   }
 }
 
@@ -35,7 +36,7 @@ export default async function PostList({ params }: PostListProps) {
 }
 
 // NOTE: getStaticProps (not export)
-const getPropsData = async (slugs: string): Promise<ContentType[]> => {
+const getPropsData = async (slugs: PathKinds): Promise<ContentType[]> => {
   const posts = await getAllPost(slugs);
   return posts;
 }

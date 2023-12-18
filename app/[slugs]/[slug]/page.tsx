@@ -8,6 +8,7 @@ import styles from './page.module.css';
 import PostMarkDown from '@/components/markdown/page';
 import Header from '@/components/header/page';
 import { PostListProps } from '../page';
+import type { PathKinds } from '@/interfaces/paths';
 
 export const metadata: Metadata = {
   title: 'Algorithm : ',
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 
 interface IPostItem {
   params: {
-    slugs: string;
+    slugs: PathKinds;
     slug: string;
   }
 }
@@ -37,14 +38,14 @@ export default async function PostItem({ params }: IPostItem) {
           </ul>
           <span className={styles.content_info_any}>{data?.level}</span>
         </div>
-        <Image
+        {/* <Image
           className={styles.content_img}
           src="/assets/main.jpeg"
           alt="post top image"
           width={680}
           height={458}
           priority
-        />
+        /> */}
         <PostMarkDown content={data?.content} />
       </div>
     </>
@@ -52,8 +53,8 @@ export default async function PostItem({ params }: IPostItem) {
 }
 
 // NOTE: getStaticProps (not export)
-async function getPropsData(slugs: string, slug: string): Promise<ContentType> {
-  const posts = await getAllPost(decodeURIComponent(slugs));
+async function getPropsData(slugs: PathKinds, slug: string): Promise<ContentType> {
+  const posts = await getAllPost(decodeURIComponent(slugs) as PathKinds);
   const thisPost = posts.find(post => decodeURIComponent(slug) === post.title);
   if (!thisPost) return {};
 

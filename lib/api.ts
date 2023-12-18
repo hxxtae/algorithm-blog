@@ -1,7 +1,11 @@
+import { remark } from 'remark';
+import remarkGfm from 'remark-gfm';
+import html from 'remark-html';
 import matter from 'gray-matter';
 
 import { ContentType, ContentsType } from '@/interfaces/contents';
 import PostType from '@/interfaces/post';
+import type { PathKinds } from '@/interfaces/paths';
 
 const dateFormat = (date: string) => {
   const dateObj = new Date(date);
@@ -11,9 +15,8 @@ const dateFormat = (date: string) => {
 // -----------------
 // Posts
 // -----------------
-export const getAllPost = async (fetch_kind: string): Promise<ContentType[]> => {
+export const getAllPost = async (fetch_kind: PathKinds): Promise<ContentType[]> => {
   const data = await getAllData(fetch_kind);
-  // data.sort(({ name: a }, { name: b }) => +a.split("_")[0] - +b.split("_")[0]);
   const contents: ContentsType[] = await Promise.all(data.map(item => getContentData(item.download_url)));
   const posts: ContentType[] = contents.map(obj => getPostBySlug(obj.content));
   posts.sort((a, b) => dateFormat(b.date) - dateFormat(a.date));
@@ -35,10 +38,21 @@ export const getPostBySlug = (contentData: string): ContentType => {
 }
 
 // -----------------
+// Set HTML of content
+// -----------------
+export const getHTML = async (data: string) => {
+  const str = await remark()
+    .use(remarkGfm)
+    .use(html)
+    .process(data);
+  return str.toString();
+}
+
+// -----------------
 // Datas
 // - type: json
 // -----------------
-export const getAllData = async (fetch_kind: string) => {
+export const getAllData = async (fetch_kind: PathKinds) => {
   try {
     const data: PostType[] = await fetch(`https://api.github.com/repos/hxxtae/algorithm/contents/blog/${fetch_kind}`)
       .then(response => response.json());
