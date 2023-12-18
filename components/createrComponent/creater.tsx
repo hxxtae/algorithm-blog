@@ -13,7 +13,7 @@ export default function CreaterComponent() {
           <div className={styles.creater_box} id='creater_height'>
             <div className={styles.creater_box_top}>
               <div className={styles.creater_img_box}>
-                <Image src='/assets/creater_image.jpg' alt="creater image" width={100} height={100}></Image>
+                <Image src='/assets/heetae.jpg' alt="creater image" width={100} height={100}></Image>
               </div>
               <span className={styles.creater_name}>Hxxtae</span>
               <p className={styles.creater_desc}>
