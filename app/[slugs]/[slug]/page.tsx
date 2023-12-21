@@ -4,16 +4,12 @@ import Image from 'next/image';
 import { getAllPost } from '@/lib/api';
 import { ContentType } from '@/interfaces/contents';
 import { dateFormatToYMD } from '@/utils/format';
+import { PostListProps } from '../page';
+import type { PathKinds } from '@/interfaces/paths';
+import metadata from '@/utils/metadata';
 import styles from './page.module.css';
 import PostMarkDown from '@/components/markdown/page';
 import Header from '@/components/header/page';
-import { PostListProps } from '../page';
-import type { PathKinds } from '@/interfaces/paths';
-
-export const metadata: Metadata = {
-  title: 'Algorithm : ',
-  description: '알고리즘 풀이 및 해설을 위한 블로그 입니다.'
-}
 
 interface IPostItem {
   params: {
@@ -24,7 +20,6 @@ interface IPostItem {
 
 export default async function PostItem({ params }: IPostItem) {
   const data = await getPropsData(params.slugs, params.slug);
-  metadata.title = `Algorithm : ${decodeURIComponent(params.slug)}`;
 
   return (
     <>
@@ -70,4 +65,14 @@ export async function generateStaticParams({ params }: PostListProps) {
     slugs: post.category,
     slug: post.title
   }));
+}
+
+// NOTE: generateMetadata
+// DESC: 정적 메타데이터를 정의하려면 layout.tsx 또는 page.tsx 파일에서 메타데이터 개체를 내보냅니다.
+export const generateMetadata = async ({ params }: IPostItem): Promise<Metadata> => {
+  return metadata({
+    title: `Algorithm | ${decodeURIComponent(params.slug)}`,
+    description: `문제 제목: ${decodeURIComponent(params.slug)}, ${decodeURIComponent(params.slugs)}`,
+    path: `/${params.slugs}/${params.slug}`
+  });
 }
