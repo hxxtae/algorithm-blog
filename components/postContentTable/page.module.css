@@ -7,6 +7,11 @@
   text-align: center;
 }
 
+.post_table img {
+  width: 100%;
+  margin: 0 auto;
+}
+
 @media only screen and (max-width: 767px) {
   .post_table {
     width: 100%;
