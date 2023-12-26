@@ -34,7 +34,7 @@ export default async function PostsComponent({ data, category }: PostsComponentP
               </div>
             </Link> 
             <div className={styles.post_info_box}>
-              <span>{post.level}</span>
+              {post.level && <span>{post.level}</span>}
               {[...post.algorithm].map((algo, algoIdx) =>
                 (<span key={algoIdx}>{algo}</span>))}
             </div>

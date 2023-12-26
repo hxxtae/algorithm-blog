@@ -28,10 +28,10 @@ export default async function PostItem({ params }: IPostItem) {
         <h1 className={styles.content_header}>{data?.title}</h1>
         <span className={styles.content_date}>{dateFormatToYMD(data?.date)}</span>
         <div className={styles.content_info}>
+          {data?.level && <span className={styles.content_info_any}>{data.level}</span>}
           <ul className={styles.content_info_algorithm}>
             {[...data?.algorithm].map((item, idx) => <li key={idx}>{item}</li>)}
           </ul>
-          <span className={styles.content_info_any}>{data?.level}</span>
         </div>
         {/* <Image
           className={styles.content_img}
