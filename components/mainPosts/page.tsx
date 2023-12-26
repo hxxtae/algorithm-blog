@@ -35,7 +35,7 @@ async function getPropsData(showCount: number = 3) {
   const programmerPost = await getAllPost('programmers');
 
   const recentPost = [...bogPost.slice(0, showCount), ...programmerPost.slice(0, showCount)];
-  recentPost.sort((a, b) => b.date - a.date);
+  recentPost.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   
   return recentPost.slice(0, showCount);
 }
