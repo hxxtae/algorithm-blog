@@ -5,6 +5,7 @@ import '@fortawesome/fontawesome-svg-core';
 import './globals.css'
 import ThemeProvider from '@/components/themeProvider/themeProvider';
 import GoogleAnalytics from '@/components/googleAnalytics/page';
+import Footer from '@/components/footer/page';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Footer />
         </ThemeProvider>
         <GoogleAnalytics />
       </body>

@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+  height: 7rem;
+  border-top: .1px solid var(--third-foreground);
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+}
+
+.links a {
+  width: 20px;
+  color: var(--secondary-foreground);
+}
+
+.links a svg {
+  width: 100%;
+  height: 100%;
+}
+
+.license {
+  font-size: 12px;
+  color: var(--secondary-foreground);
+}
