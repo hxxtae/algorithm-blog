@@ -22,7 +22,7 @@ export default function CreaterComponent() {
                 Email inquiry -&gt; fkdlxmfkdl@gmail.com.
               </p>
               <div className={styles.creater_link}>
-                <Link href='https://heetae.me' target='_blank'>
+                <Link href='https://heetae.dev' target='_blank'>
                   <FontAwesomeIcon icon={faLink} size='1x' />
                   <span>heetae.me</span>
                 </Link>
