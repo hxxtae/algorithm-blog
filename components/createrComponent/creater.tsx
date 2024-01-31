@@ -24,7 +24,7 @@ export default function CreaterComponent() {
               <div className={styles.creater_link}>
                 <Link href='https://heetae.dev' target='_blank'>
                   <FontAwesomeIcon icon={faLink} size='1x' />
-                  <span>heetae.me</span>
+                  <span>heetae.dev</span>
                 </Link>
                 <Link href='https://github.com/hxxtae' target='_blank'>
                   <FontAwesomeIcon icon={faLink} size='1x' />
