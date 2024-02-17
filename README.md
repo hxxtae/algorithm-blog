@@ -1,6 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <img src="./public/assets/header_logo_light.svg" style="max-width: 250px; background: #000" alt="logo" />
+</div>
+
+<br>
+
+<div align="center">
+  <h1>Algorithm Blog</h1>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="https://img.shields.io/github/last-commit/hxxtae/algorithm-blog?color=%23e7e7e7&logo=github" alt="git-last-commit">
+</div>
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
@@ -20,17 +36,24 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Where is the algorithm from?
 
-To learn more about Next.js, take a look at the following resources:
+From [Baekjoon Online Jubge](https://www.acmicpc.net/) and [Programmers](https://school.programmers.co.kr/learn/challenges)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+|     |     |
+| --- | --- |
+| <img src="https://github.com/JunbaeJs/junbae-mode/assets/79623316/e278acb8-6b05-4eb5-83bc-35d28a335bbe" style="width: 200px" /> | <img src="https://github.com/JunbaeJs/junbae-mode/assets/79623316/f9aa4a5f-0598-427c-929e-ae0904d0d769" style="width: 200px; background: #fff" /> |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## What is benefits?
 
-## Deploy on Vercel
+It may be helpful for beginners and beginners in algorithms.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Curious or unfamiliar algorithms can be understood through algorithmic solutions and explanations.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+In the future we will write various algorithmic solutions.
+
+I will try to help you understand with a more detailed explanation.
+
+## Author
+
+[hxxtae](https://github.com/hxxtae)
