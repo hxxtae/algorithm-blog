@@ -40,7 +40,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 From [Baekjoon Online Jubge](https://www.acmicpc.net/) and [Programmers](https://school.programmers.co.kr/learn/challenges)
 
-|     |     |
+| Programmers | Baekjoon Online Judge |
 | --- | --- |
 | <img src="https://github.com/JunbaeJs/junbae-mode/assets/79623316/e278acb8-6b05-4eb5-83bc-35d28a335bbe" style="width: 200px" /> | <img src="https://github.com/JunbaeJs/junbae-mode/assets/79623316/f9aa4a5f-0598-427c-929e-ae0904d0d769" style="width: 200px; background: #fff" /> |
 
