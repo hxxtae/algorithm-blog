@@ -11,7 +11,11 @@
 <br>
 
 <div align="center">
-  <img src="https://img.shields.io/github/last-commit/hxxtae/algorithm-blog?color=%23e7e7e7&logo=github" alt="git-last-commit">
+  <img src="https://img.shields.io/github/last-commit/hxxtae/algorithm-blog?style=for-the-badge&logo=github&labelColor=%23000&color=%23fff
+  " alt="git-last-commit" />
+  <a href="https://github.com/hxxtae/algorithm-blog">
+    <img src="https://img.shields.io/badge/algorithm%20blog-%20?style=for-the-badge&logo=github&labelColor=%23000&color=%23fff" alt="git-rep-link" />
+  </a>
 </div>
 
 ## Getting Started
