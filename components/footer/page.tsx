@@ -11,9 +11,6 @@ export default function Footer() {
         <Link href="https://github.com/hxxtae/algorithm-blog" target='_blank'>
           <FontAwesomeIcon icon={faGithubSquare} />
         </Link>
-        <Link href="https://www.linkedin.com/in/kimheetae/" target='_blank'>
-          <FontAwesomeIcon icon={faLinkedin} />
-        </Link>
       </div>
       <span className={styles.license}>Copyright © 2023 HeetaeKim</span>
     </footer>
